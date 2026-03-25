@@ -1,5 +1,7 @@
 # 小说改编剧本 Skill
 
+[English](README.md)
+
 一个 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) 技能插件，将小说和故事改编为专业的好莱坞标准电影剧本。
 
 ## 功能特性

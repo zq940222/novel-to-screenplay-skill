@@ -1,5 +1,7 @@
 # Novel to Screenplay Skill
 
+[中文文档](README_CN.md)
+
 A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill that adapts novels and stories into professional Hollywood-standard movie screenplays.
 
 ## Features
