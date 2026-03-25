@@ -89,6 +89,64 @@ AI video platforms enforce strict content moderation. Prompts that trigger filte
 - Shot C: Resolution with child safe (after danger)
 Never show a child in the dangerous moment itself.
 
+### 8. Real Persons & Likenesses (CRITICAL — Instant Rejection)
+**Blocked**: ANY real person's name, celebrity reference, public figure, real person's photo/image as reference input. This is the #1 cause of prompt rejection on Chinese AI video platforms.
+
+**What triggers rejection:**
+- Real names in any language: "Tom Cruise", "刘德华", "Taylor Swift"
+- Indirect references: "a famous Hollywood actor", "looks like [celebrity]"
+- Character descriptions that clearly describe a specific real person
+- Using real person photos as image-to-video reference input
+- Historical figures by name: "Napoleon", "秦始皇" (context-dependent)
+- Social media influencers, YouTubers, streamers by name
+
+**Rewriting Strategies:**
+| Original Intent | Safe Replacement |
+|-----------------|------------------|
+| "Looks like Brad Pitt" | "Ruggedly handsome man in his 40s with chiseled jawline and tousled blonde hair" |
+| "A woman resembling Audrey Hepburn" | "Elegant woman with short dark hair, slender neck, refined features, classic beauty" |
+| "Obama gives a speech" | "A distinguished authority figure in a dark suit addresses a crowd from a podium" |
+| "Jackie Chan fighting" | "Athletic middle-aged man with agile movements performing martial arts" |
+| "周杰伦 singing" | "Young man with stylish cap performing on a neon-lit stage, passionate expression" |
+| Real person photo as input | Generate a fictional character portrait first, use THAT as reference |
+
+**Mandatory Rules:**
+1. **NEVER use real person names** in any prompt — not even in parenthetical notes
+2. **NEVER reference celebrities** even indirectly ("that famous actor from...")
+3. **Describe features generically** — age, build, hair, expression — never a specific identity
+4. **Image inputs must be fictional** — AI-generated portraits, illustrations, or stock photos only
+5. **Historical figures**: replace with role descriptions ("a military commander", "an emperor in ancient robes")
+
+### 9. Copyright & Intellectual Property
+**Blocked**: Copyrighted characters, brand logos, trademarked designs, recognizable IP elements
+
+**What triggers rejection:**
+- Character names from movies/anime/games: "Spider-Man", "孙悟空 (from specific adaptation)", "Mario"
+- Brand logos: Nike swoosh, Apple logo, Coca-Cola
+- Specific franchise elements: lightsabers (Star Wars), wands with specific designs (Harry Potter)
+- Song lyrics or book quotes embedded in prompts
+- Recognizable costume/outfit designs from specific IPs
+- Architecture/locations that are trademarked (e.g., specific theme park castles)
+
+**Rewriting Strategies:**
+| Original Intent | Safe Replacement |
+|-----------------|------------------|
+| "Spider-Man swinging" | "A masked figure in a red and blue suit swinging between buildings on web-like ropes" |
+| "Wearing Nike shoes" | "Wearing modern athletic sneakers" |
+| "Hogwarts castle" | "A grand medieval castle with multiple towers on a misty hilltop" |
+| "A character like Goku" | "A muscular warrior with spiky black hair in an orange martial arts uniform, energy aura" |
+| "Starbucks coffee cup" | "A paper coffee cup with a green circular logo" → better: "a paper coffee cup" |
+| "Driving a Ferrari" | "Driving a sleek red Italian sports car" |
+| "Lightsaber duel" | "Two figures clashing with glowing energy swords in a dark corridor" |
+
+**Mandatory Rules:**
+1. **NEVER use copyrighted character names** — describe appearance generically
+2. **NEVER include brand names** — describe the object without brand identity
+3. **Remove all logos** — if a scene needs branded items, describe only the generic object
+4. **Franchise elements**: abstract to generic fantasy/sci-fi equivalents
+5. **Music/text**: never embed copyrighted lyrics or quotes in prompts
+6. **When adapting a published novel**: the story itself is licensed, but visual prompts must not reference other copyrighted visual IPs
+
 ## Universal Safety Rewriting Rules
 
 ### The 5 Substitution Principles
@@ -110,6 +168,11 @@ Add these to any borderline prompt to reduce rejection risk:
 
 ### Pre-Submission Checklist
 Before finalizing any prompt, verify:
+- [ ] **No real person names or likenesses** — no celebrities, politicians, historical figures, influencers
+- [ ] **No real person photos as reference input** — only AI-generated or stock images
+- [ ] **No copyrighted characters** — no Mickey Mouse, Spider-Man, Pikachu, 孙悟空 (specific adaptations), etc.
+- [ ] **No brand names or logos** — no Nike, Apple, Coca-Cola, Ferrari, Starbucks, etc.
+- [ ] **No franchise-specific props** — no lightsabers, Mjolnir, Death Note, dragon balls, etc.
 - [ ] No visible weapons in active use
 - [ ] No blood, gore, or graphic injury
 - [ ] No nudity or overtly sexual content
@@ -117,21 +180,34 @@ Before finalizing any prompt, verify:
 - [ ] No children in dangerous or distressing situations
 - [ ] No drug use or paraphernalia shown
 - [ ] No hate speech, slurs, or discriminatory content
-- [ ] No real brand logos or copyrighted characters
-- [ ] No celebrity faces or likenesses referenced by name
 
 ## Platform-Specific Notes
 
 ### Seedance 2.0 (即梦 AI)
-- Stricter on violence and sexual content than Western platforms
+
+**Instant rejection triggers (zero tolerance):**
+- **Real person names** — ANY real name in prompt text = instant rejection
+- **Real person photos** — using a real person's photo as image reference input = instant rejection
+- **Copyrighted characters** — Mickey Mouse (米老鼠), Doraemon (哆啦A梦), Pikachu (皮卡丘), Naruto (鸣人), etc. = instant rejection
+- **Brand logos** — any recognizable trademark in prompt or reference image
+
+**Other strict filters:**
+- Violence and sexual content: stricter than Western platforms
 - Political sensitivity: avoid any content related to Chinese politics, leaders, or sensitive historical events
 - Religious content: keep abstract and respectful
 - Smoking/alcohol: generally filtered; use the substitution strategies above
 - Text/watermarks: avoid prompts that generate text on screen (often garbled)
 - Chinese cultural sensitivity: respect traditional symbols, avoid stereotypes
 
+**Recommended workflow for Seedance:**
+1. Generate all character portraits using AI first (no real person reference)
+2. Use these AI portraits as image-to-video reference for consistency
+3. Run every prompt through the Pre-Submission Checklist above
+4. Test one shot per scene before batch generating
+
 ### General Platform Tips
 - When in doubt, make the prompt more abstract/artistic
 - Test borderline prompts with a single shot before batching
 - Keep a "safe version" and "director's cut version" of sensitive scenes
 - Use post-production editing to combine safe AI outputs into a cohesive sequence
+- **Golden rule**: if a prompt contains a proper noun (person name, brand, character name), replace it with a generic description

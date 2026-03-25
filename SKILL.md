@@ -194,7 +194,14 @@ Apply the **5 Substitution Principles** for any flagged content:
 4. **Metaphor and symbol** — wilting flower, cracking mirror, rain on window
 5. **Sound cues in notes** — "the sound of shattering glass" (for editing, not for AI prompt)
 
-**Auto-rewrite triggers** (rewrite before outputting):
+**ZERO TOLERANCE rules** (instant rejection — rewrite ALWAYS):
+- **Real person names** → replace with generic physical descriptions (age, build, hair, features)
+- **Real person photos as input** → generate AI character portrait first, use that as reference
+- **Copyrighted characters** (Mickey Mouse, Spider-Man, Pikachu, Doraemon, etc.) → describe appearance generically without naming the character or franchise
+- **Brand names/logos** (Nike, Apple, Ferrari, Starbucks, etc.) → describe the generic object only
+- **Franchise-specific props** (lightsabers, dragon balls, Death Note, etc.) → abstract to generic equivalents
+
+**Other auto-rewrite triggers** (rewrite before outputting):
 - Violence/weapons → reaction shots, aftermath, silhouettes
 - Sexual/intimate → proximity, eye contact, soft lighting
 - Gore/horror → atmosphere, shadows, character reactions
